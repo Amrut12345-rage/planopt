@@ -1,0 +1,13 @@
+name: miniproject
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+    - google-generative-ai
+    - python-dotenv
+    - chromadb
+    - sentence-transformers
+    - numpy
+    - torch
