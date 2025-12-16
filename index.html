@@ -89,9 +89,9 @@ function displayResult(data) {
     const out = document.getElementById("output");
     out.innerHTML = "";
 
-    // ------------------------------------
+   
     // Case 1: Clean JSON structure returned
-    // ------------------------------------
+    
     if (data.summary) {
         out.innerHTML += `<h3>Summary</h3><p>${data.summary}</p>`;
 
@@ -118,17 +118,17 @@ function displayResult(data) {
         return;
     }
 
-    // ------------------------------------
+   
     // Case 2: Raw text from model
-    // ------------------------------------
+    
     if (data.raw_response) {
         out.innerHTML = `<h3>AI Response</h3><pre>${data.raw_response}</pre>`;
         return;
     }
 
-    // ------------------------------------
+   
     // Case 3: Completely unexpected output
-    // ------------------------------------
+   
     out.innerHTML = "<p>No readable output returned.</p>";
 }
 
