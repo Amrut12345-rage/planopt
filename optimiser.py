@@ -4,8 +4,8 @@ import google.generativeai as genai
 from rag_pipeline import retrieve_docs
 from config import API_KEY  # ensures config runs
 
-MODEL_NAME = "models/gemini-2.5-pro"
-  # or gemini-1.0-pro
+MODEL_NAME = "models/gemini-2.5-flash"
+  
 
 
 def build_prompt(user_plan: str, retrieved_docs: List[str]) -> str:
