@@ -3,7 +3,7 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 from typing import List
 
-# New Chroma persistent client
+# New Chroma client
 client = chromadb.PersistentClient(path="./chroma_db")
 
 # Create or load collection
@@ -49,7 +49,7 @@ sample_docs = {
     "doc3": "Project planning includes timelines, dependencies, resources, workloads, and risk mitigation strategies."
 }
 
-# Correct way to fetch existing IDs from Chroma
+# fetch existing IDs from Chroma
 try:
     peek = collection.peek()  # returns up to first 100 items
     existing_ids = peek.get("ids", [])
