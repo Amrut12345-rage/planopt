@@ -1,8 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List, Any
-
-# Ensure the current package directory is on sys.path so sibling modules import correctly
+
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
