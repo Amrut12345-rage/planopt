@@ -1,11 +1,11 @@
-from google import generativeai as genai
+import os
+import google.generativeai as genai
 
-API_KEY = ""
+API_KEY = os.getenv("GEMINI_API_KEY")
 
-if not API_KEY or API_KEY.strip() == "":
-    raise ValueError("ERROR: API KEY is empty. Please insert your Gemini API key in config.py")
+if not API_KEY:
+    raise RuntimeError(
+        "GEMINI_API_KEY not found. Set it using: setx GEMINI_API_KEY \"your_key\""
+    )
 
-# Configure Gemini
 genai.configure(api_key=API_KEY)
-
-
